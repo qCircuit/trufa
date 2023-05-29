@@ -1,3 +1,4 @@
+import datetime
 import json
 import mlflow
 import pickle
@@ -98,7 +99,8 @@ if __name__ == '__main__':
                 return v.lower()
 
             def predict(self, context, model_input):
-                         
+                
+                model_input["hour"] = model_input.created_ts.apply(lambda v: datetime.datetime.strptime(v, '%Y-%m-%d %H:%M:%S').hour)
                 # assign columns if missing
                 model_input[[x for x in self.features['use'] if x not in model_input]] = -1
                 model_input = model_input.fillna(-1)
@@ -111,6 +113,8 @@ if __name__ == '__main__':
                 # processing
                 model_input["site_domain"] = model_input["site_domain"].apply(lambda v: ''.join([x for x in v.split(".") if x != "www"]))
                 model_input = self.process_device_os(model_input)
+
+                print(model_input)
                 
                 # encode & scale   
                 model_input[self.features['object']] = self.encoder.transform(model_input[self.features['object']].values)

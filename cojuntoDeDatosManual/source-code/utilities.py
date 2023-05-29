@@ -26,7 +26,7 @@ def get_period(start_day: str, n_days: int) -> list:
 
 def init_enviroment(aws:bool=False):
     idx = configura.idx_traffic if any([configura.idx_campaign == 0, configura.idx_campaign == "0"]) else configura.idx_campaign
-    experiment_name = f"{idx}_{configura.target}_trainer"
+    experiment_name = f"{idx}_{list(configura.target.keys())[0]}_trainer"
     if aws:
         os.environ["MLFLOW_S3_ENDPOINT_URL"] = "https://s3.amazonaws.com"
         os.environ["MLFLOW_TRACKING_URI"] = "https://mlflow.truffle.bid"
