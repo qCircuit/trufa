@@ -1,0 +1,21 @@
+19:54:06,958 alembic.runtime.migration INFO Context impl SQLiteImpl.
+19:54:06,958 alembic.runtime.migration INFO Will assume non-transactional DDL.
+19:54:14,921 urbanGUI INFO post processing started...
+19:54:17,692 urbanGUI INFO post processing completed, time : 2s, shape: (326287, 16)
+19:54:17,697 urbanGUI INFO ...post processing target counts: is_click
+0           325942
+1              345
+dtype: int64
+19:54:17,697 urbanGUI INFO posthape: (326287, 16)
+19:54:23,542 urbanGUI INFO train shape: (261029, 16), test shape: (65258, 16)
+19:54:23,543 urbanGUI INFO train target counts:
+0    260759
+1       270
+Name: is_click, dtype: int64
+19:54:23,544 urbanGUI INFO test target counts:
+0    65183
+1       75
+Name: is_click, dtype: int64
+19:55:20,71 urbanGUI INFO Epoch 001/001: | Loss: 0.03247 | Acc: 99.271| Valid_Loss: 0.00000 | Valid_Acc: 0.196 | Time: 56.5
+19:55:20,86 urbanGUI INFO model fit completed
+19:55:24,231 root INFO creating /home/hilbert/trufa/cojuntoDeDatosManual/mlruns/1/91c0f2a61b514a6eb1f8d9f03217aabf/artifacts/model_mlflow_pyfunc_banner_0/artifacts
