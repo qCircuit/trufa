@@ -1,20 +1,20 @@
-22:29:37,165 alembic.runtime.migration INFO Context impl SQLiteImpl.
-22:29:37,166 alembic.runtime.migration INFO Will assume non-transactional DDL.
-22:29:48,314 urbanGUI INFO post processing started...
-22:29:51,923 urbanGUI INFO post processing completed, time : 3s, shape: (326287, 16)
-22:29:51,930 urbanGUI INFO ...post processing target counts: is_click
+18:54:13,904 alembic.runtime.migration INFO Context impl SQLiteImpl.
+18:54:13,904 alembic.runtime.migration INFO Will assume non-transactional DDL.
+18:54:18,421 urbanGUI INFO post processing started...
+18:54:20,517 urbanGUI INFO post processing completed, time : 2s, shape: (326287, 16)
+18:54:20,521 urbanGUI INFO ...post processing target counts: is_click
 0           325942
 1              345
 dtype: int64
-22:29:51,930 urbanGUI INFO posthape: (326287, 16)
-22:29:58,670 urbanGUI INFO train shape: (261029, 16), test shape: (65258, 16)
-22:29:58,672 urbanGUI INFO train target counts:
+18:54:20,521 urbanGUI INFO posthape: (326287, 16)
+18:54:24,996 urbanGUI INFO train shape: (261029, 16), test shape: (65258, 16)
+18:54:24,997 urbanGUI INFO train target counts:
 0    260759
 1       270
 Name: is_click, dtype: int64
-22:29:58,673 urbanGUI INFO test target counts:
+18:54:24,998 urbanGUI INFO test target counts:
 0    65183
 1       75
 Name: is_click, dtype: int64
-22:30:40,813 urbanGUI INFO Epoch 001/001: | Loss: 0.03141 | Acc: 99.294| Valid_Loss: 0.00000 | Valid_Acc: 0.196 | Time: 40.9
-22:30:40,840 urbanGUI INFO model fit completed
+18:54:34,751 urbanGUI INFO Epoch 001/001: | Loss: 0.03307 | Acc: 99.126| Valid_Loss: 0.00000 | Valid_Acc: 0.196 | Time: 9.1
+18:54:34,765 urbanGUI INFO model fit completed

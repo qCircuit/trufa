@@ -107,11 +107,12 @@ if __name__ == '__main__':
                 model_input = model_input[self.features['use']].copy()
                 
                 # process objects
-                for f in self.features["object"]:
-                    model_input[f] = model_input[f].apply(self.objects_processing)
+                #for f in self.features["object"]:
+                #    model_input[f] = model_input[f].apply(self.objects_processing)
+                model_input[self.features["object"]] = model_input[self.features["object"]].applymap(self.objects_processing)
                 
                 # processing
-                model_input["site_domain"] = model_input["site_domain"].apply(lambda v: ''.join([x for x in v.split(".") if x != "www"]))
+                #model_input["site_domain"] = model_input["site_domain"].apply(lambda v: ''.join([x for x in v.split(".") if x != "www"]))
                 model_input = self.process_device_os(model_input)
 
                 print(model_input)

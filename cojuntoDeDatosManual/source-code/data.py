@@ -160,9 +160,9 @@ def pipe_processing():
 
     # enrich data
     df['hour'] = df.created_ts.apply(get_hour)
-    df['weekday'] = df.created_ts.apply(get_weekday)
-    df.site_domain = df.site_domain.fillna("-1")
-    df.site_domain = df.site_domain.apply(lambda v: ''.join([x for x in v.split(".") if x != "www"]))
+    #df['weekday'] = df.created_ts.apply(get_weekday)
+    #df.site_domain = df.site_domain.fillna("-1")
+    #df.site_domain = df.site_domain.apply(lambda v: ''.join([x for x in v.split(".") if x != "www"]))
 
     # clean data
     df = df[df.is_view == 1].reset_index(drop=True) # drop specific db errors
